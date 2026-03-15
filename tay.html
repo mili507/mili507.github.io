@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <title>for onesime</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Berkshire Swash', cursive;
+            /* Fondo GIF animado principal (cambia esta URL) */
+            background: url('fondo.gif') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .contenedor {
+            background-color: transparent;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* Nueva frase superior */
+        .super-frase {
+            color: #edafec;
+            font-size: 2rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* Cuadro de la frase con imagen de fondo (cambia la URL) */
+        #frase {
+            background: url('fondo.jpg') repeat, #c7aed2;
+            background-size: auto, cover;
+            color: white;
+            font-size: 28px;
+            padding: 40px 30px;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.5;
+            border: 2px solid rgba(255,215,0,0.5);
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 22px;
+            padding: 15px 35px;
+            background: #e9c0db;
+            color: #000;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            background: #d2aecc;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* GIF decorativo en la esquina inferior derecha */
+        .gif-inferior {
+            position: fixed;
+            bottom: 5px;
+            right: 10px;
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            z-index: 10;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .gif-inferior:hover {
+            opacity: 1;
+        }
+
+        h1 {
+            color: rgb(252, 255, 207);
+            text-shadow: 3px 3px 6px #000;
+            font-size: 3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Frase añadida arriba del título -->
+        <p class="super-frase">everytime you feel upset,please check this out </p>
+        <h1>for the pritiest on earth</h1>
+        <div id="frase"><3</div>
+        <button id="btn-frase">click me</button>
+    </div>
+
+    <!-- GIF en la parte inferior derecha (cambia la URL) -->
+    <img class="gif-inferior" src="descarga.gif" alt="GIF decorativo">
+
+    <script>
+        // Todas tus frases de amor
+        const frases = [
+            "-I LOVE YOU SO MUCH!!",
+            "-I love how brilliant you are, it always amazes me.",
+            "-I am proud of you. Even if sometimes day’s are bad, i’m sure you do try your best. Im so proud of how far you’ve gone.",
+            "-I love how I’m able to relate to you so easily.",
+            "-You’re very creative! I think that, when its comes to analyzing, one needs creativity for sure. Your analysis are great, which to me makes how creative you actually are clear!",
+            "-You’re my number one! The best ever!",
+            "-You’re loved!",
+            "-I love how reasonable you are, and always try to give me solutions when I need them.",
+            "-I’ll forever be grateful that I met you!",
+            "-I love how you’re able to bring happiness!",
+            "-You’re essential!",
+            "-You’re the sweetest ever!",
+            "-I love how reassuring you are, always making me feel better when I’m upset <3.",
+            "-I love how understanding you are, you take your time into making people feel understood and seen, I think thats beautiful.",
+            "-I love your smile, I think its adorable! Keep smiling!",
+            "-I love how you’re so smart and literate. Whenever I’m confused about something and ask you, you always explain. I value that a lot.",
+            "-I love the way you express yourself.",
+            "-I love your patience, i’ll forever be grateful for how patient you are with me.",
+            "-You’re doing great!",
+            "-I love your voice! Even though I don’t hear it a lot, I think its the sweetest ever!",
+            "-I love how affectionate you are with me. Its such a big comfort to me.",
+            "-I love how well educated you are on the things you enjoy, I find that admirable!",
+            "-I love how you always listen to me, and care to give advice I appreciate with my whole heart.",
+            "-I love how loving you are with me! I LOVE YOU MORE!",
+            "-I love how considerate you are with me.",
+            "-I love how enthusiastic you are about the things I like, always making me feel actually heard.",
+            "-You’re beloved!",
+            "-I love how you talk, it feels so refreshing talking to you. I mean this in the best way possible.",
+            "-I love our conversations. Theyre something i’ll forever enjoy and hold dear!",
+            "-I love how pretty you are!!",
+            "-I love how kind you are, I appreciate your kindness a lot.",
+            "-I love how absolutely amazing you are! Please, it still amazes me how you know so much languages… “ohh but its academical level” THATS STILL SO AMAZING!?",
+            "-I love how fun you are to be with. Every second we pass time together is amazing! I have so much fun.",
+            "-You’re, like, THE coolest person I know! YOU’RE SO COOL PLEASE🥹🥹🥹",
+            "-I love how supportive you are! You always motivate me continue doing my stuff!",
+            "-I love the way you draw, YOUR DRAWINGS ARE ABSOLUTE PEAK!",
+            "-I love how you’re always there, not mattering what.",
+            "-I love how you’re always able to draw a smile on my face, one way or another!",
+            "-I love how you bring me joy every single time.",
+            "-I love how passionate you are about the stuff you like!",
+            "-I love the way you analyze things. Your insights are absolutely amazing, I always learn a thing or two,,, i value that so much.",
+            "-I love how you’re the most gentle person I know.",
+            "-I love talking to you!",
+            "-You’re great!",
+            "-I trust you!!",
+            "-You’re so talented!",
+            "-You’re so talented!",
+            "-I love your advice. Even if you might feel its not good, it’s actually great! Know that whenever you give me advice, I do use it.",
+            "-You’re so amazing!",
+            "-I love how you’re actually funny! We have a couple of inner jokes, I really hold them dear.",
+            "-I love how you excel so amazingly at everything.",
+            "-I love how you take details into account, not mattering how small they might be.",
+            "-You’re the kindest, sweetest person ever!",
+            "-You’re beautiful! inside and outside.",
+            "-I love how you’re literally the best ever!",
+            "-I love you. You’re my number one! Forever, and always.",
+            "-I love how we met! I’ll forever find it kinda funny, I genuinely never thought classi9 would make me meet someone as wonderful as you!",
+            "-You’re the coolest!",
+            "-You’re absolutely wonderful!",
+            "-YOU’RE NOT ALONE! WE GOT THIS!!!",
+            "-Words hold special value to me, whenever I tell you things like this, know they’re absolutely true!",
+            "-I’ll love you no matter what!"
+        ];
+
+        // Evento del botón para mostrar frase aleatoria
+        document.getElementById('btn-frase').addEventListener('click', () => {
+            const indice = Math.floor(Math.random() * frases.length);
+            document.getElementById('frase').textContent = frases[indice];
+        });
+    </script>
+</body>
+</html>
